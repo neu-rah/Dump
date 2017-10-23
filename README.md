@@ -4,6 +4,8 @@ Simple memory dump for AVR RAM and Flash (progmem)
 
 ## API
 
+### RAM
+
 ```c++
 void dumpRam(Print& out,void const*at,int sz)
 ```
@@ -13,6 +15,7 @@ dump ram values to output where:
 - **at** : The memory pointer
 - **sz** : The size o memory in bytes
 
+### Flash / PROGMEM
 ```c++
 void dumpPgm(Print& out,void const*at,int sz)
 ```
