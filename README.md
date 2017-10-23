@@ -2,8 +2,6 @@
 
 Simple memory dump for AVR RAM and Flash (progmem)
 
-this library uses https://github.com/scottdky/Streaming streaming library.
-
 ## API
 
 ```c++

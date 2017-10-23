@@ -1,0 +1,13 @@
+{
+  "name": "Dump",
+  "keywords": "memory ram flash progmem debug utility print",
+  "description": "AVR dump RAM and Flash",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/neu-rah/Dump",
+    "branch": "master"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}

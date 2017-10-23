@@ -2,3 +2,12 @@
 .clang_complete
 .gcc-flags.json
 .piolibdeps
+/debug
+.gitignore
+!/.gitignore
+lib
+.travis.yml
+!/.travis.yml
+/TODO.txt
+platformio.ini
+!/platformio.ini

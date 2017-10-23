@@ -1,5 +1,4 @@
 #include <Dump.h>
-#include <Streaming.h>//https://github.com/scottdky/Streaming
 
 void setup() {
   Serial.begin(115200);
@@ -7,9 +6,10 @@ void setup() {
 }
 
 void loop() {
-  Serial<<"Dump RAM example"<<endl;
+  Serial.println("Dump RAM example");
   dumpRam(Serial,0x100,64);
-  Serial<<endl<<"Dump Flash/Progmem example"<<endl;
+  Serial.println();
+  Serial.println("Dump Flash/Progmem example");
   dumpPgm(Serial,0x100,64);
   delay(2000);
 }
