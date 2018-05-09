@@ -14,18 +14,18 @@ void dump(Print& out,void const*at,int sz,unsigned char (*memByte)(const void*))
       if (sz-c>0) {
         // Because ISO C forbids `void*` arithmetic, we have to do some funky casting
         void *memAddress = (void *)((int)at + c);
-        
-        unsigned char v = memByte(memAddress);        
+        unsigned char v = memByte(memAddress);
+
         out.write(v>=32&&v<='z'?v:'.');
       } else out.write(' ');
     }
     out.write(' ');
     for (int c=0; c<16 && sz; c++, sz--) {
       // Because ISO C forbids `void*` arithmetic, we have to do some funky casting
-      at = (void *)((int)at + 1);
-      
-      if (c==8) out.write(' ');
       unsigned char v=memByte(at);
+      at = (void *)((int)at + 1);
+
+      if (c==8) out.write(' ');
       out.print(v<16?"0":"");
       out.print(v,HEX);
       out.write(v==0x97?'=':' ');
