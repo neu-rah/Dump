@@ -1,15 +1,20 @@
 #include <Dump.h>
 
+const char ramTest[]="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
+const char pgmTest[] PROGMEM="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
+
 void setup() {
   Serial.begin(115200);
   while(!Serial);
+  delay(2000);
 }
 
 void loop() {
   Serial.println("Dump RAM example");
-  dumpRam(Serial,0x100,64);
+  dumpRam(Serial,ramTest,64);
   Serial.println();
   Serial.println("Dump Flash/Progmem example");
-  dumpPgm(Serial,0x100,64);
+  dumpPgm(Serial,pgmTest,64);
+  Serial.println();
   delay(2000);
 }
