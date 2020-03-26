@@ -16,7 +16,7 @@ void dump(Print& out,void const*at,int sz,unsigned char (*memByte)(const void*))
         void *memAddress = (void *)((int)at + c);
         unsigned char v = memByte(memAddress);
 
-        out.write(v>=32/*&&v<='z'*/?v:'.');
+        out.write((v>=32&&v<='z'/*&&v!=0xBF*/)?v:'.');
       } else out.write(' ');
     }
     out.write(' ');
@@ -28,7 +28,6 @@ void dump(Print& out,void const*at,int sz,unsigned char (*memByte)(const void*))
       if (c==8) out.write(' ');
       out.print(v<16?"0":"");
       out.print(v,HEX);
-      // out.write(v==0x97?'=':' ');
       out.write(' ');
     }
     out.println();

@@ -1,7 +1,7 @@
 #include <Dump.h>
 
-const char ramTest[]="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
-const char pgmTest[] PROGMEM="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
+const unsigned char ramTest[]        ="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
+const unsigned char pgmTest[] PROGMEM="@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@";
 
 void setup() {
   Serial.begin(115200);
